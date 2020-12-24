@@ -263,8 +263,72 @@ body{
       }
     }
   }
+  &-best{
+    &__icon{
+      width: 5rem;
+      height: 5rem;
+      border-radius: 4px;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: #ffa400;
+      position: relative;
+      z-index: 1;
+      &--green{
+        color: #07a787;
+      }
+      &--purple{
+        color: purple;
+      }
+      &--red{
+        color: red;
+      }
+      &:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: currentColor;
+        opacity: 0.25;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+    &__title{
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    &__desc{
+      font-weight: 300;
+    }
+    &__list{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: -5rem;
+    }
+    &__item{
+      width: calc(50% - 3rem);
+      margin-bottom: 5rem;
+    }
+  }
 }
 
+.text-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &--2{
+    -webkit-line-clamp: 2;
+  }
+}
 
 
 
